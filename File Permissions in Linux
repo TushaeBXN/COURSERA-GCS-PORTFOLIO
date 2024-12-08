@@ -1,0 +1,68 @@
+# File Permissions in Linux
+
+## Project Description
+The research team at my organization needed to update file permissions for files and directories within the `projects` directory. Current permissions did not reflect the level of authorization needed, so I checked and updated them to ensure system security.
+
+---
+
+## Tasks Performed
+
+### 1. Check File and Directory Details
+I used Linux commands to determine existing permissions for a specific directory in the file system.
+
+```bash
+# Command to list files and their permissions
+ls -la /home/researcher2/projects
+This command displayed a detailed listing of all files, including hidden files in the projects directory. 
+The permissions were represented by a 10-character string in the first column.
+
+## 2. Describe the Permissions String
+Permissions string explained:
+
+1st Character: Indicates file type (d for directory, - for regular file).
+2nd-4th Characters: Read (r), Write (w), Execute (x) for the user.
+5th-7th Characters: Read (r), Write (w), Execute (x) for the group.
+8th-10th Characters: Read (r), Write (w), Execute (x) for other users.
+
+Example:
+For project_t.txt, the permissions are:-rw-rw-r--
+
+File: - (regular file)
+User: rw (read and write)
+Group: rw (read and write)
+Other: r (read-only)
+
+## 3. Change File Permissions
+a) Remove Write Access for Others
+The organization wanted to restrict write access for others. For project_k.txt:
+# Remove write access for others
+chmod o-w /home/researcher2/projects/project_k.txt
+
+# Verify changes
+ls -la /home/researcher2/projects
+
+## 3b b) Update Permissions on a Hidden File
+The file .project_x.txt was archived, requiring only read access for the user and group, and no write access.
+# Update permissions on a hidden file
+chmod u-w,g-w,g+r /home/researcher2/projects/.project_x.txt
+
+# Verify changes
+ls -la /home/researcher2/projects
+
+## 4. Change Directory Permissions
+The drafts directory should only allow researcher2 to have execute permissions. No other users should have access.
+# Remove execute permissions for the group
+chmod g-x /home/researcher2/projects/drafts
+
+# Verify changes
+ls -la /home/researcher2/projects
+
+## Summary
+The following steps were performed:
+
+Checked file and directory permissions using ls -la.
+Updated permissions with the chmod command:
+Removed write access for others on specific files.
+Adjusted permissions for hidden files.
+Modified directory permissions to restrict access.
+These updates enhanced the system's security by ensuring that access levels matched the organization's requirements.
