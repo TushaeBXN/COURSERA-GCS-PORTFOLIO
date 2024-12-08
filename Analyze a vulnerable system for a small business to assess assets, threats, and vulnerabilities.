@@ -1,1 +1,76 @@
+# NIST SP 800-30 Rev. 1: Guide to Assessing Risk
+
+NIST SP 800-30 provides guidance on performing risk assessments, including identifying, analyzing, and remediating risks. Organizations use this framework to assess the likelihood and severity of risks, enabling informed decisions about resource allocation, control implementation, and remediation prioritization.
+
+---
+
+## Overview
+- **Document:** NIST SP 800-30 Rev. 1
+- **Purpose:** Updated guidance reflecting advancements in technology and regulatory requirements.
+- **Resource:** [NIST's Computer Security Resources Center](https://csrc.nist.gov/) for more information.
+
+---
+
+## Threat Sources
+Threat sources are entities or circumstances that may negatively impact an organization's information systems. These sources can be internal or external.
+
+### Types of Threat Sources
+| **Type**             | **Examples**              | **Description**                                                                 |
+|-----------------------|---------------------------|---------------------------------------------------------------------------------|
+| **Standard User**     | Employee, Customer       | May accidentally or purposefully exploit resources, altering or stealing data. |
+| **Privileged User**   | System Admin             | Has elevated access, posing greater risk to systems and data.                  |
+| **Group**             | Competitor, Nation State | Intentional exploitation for gain or disruption.                               |
+| **Outsider**          | Hacker, APT              | Exploit vulnerabilities through unauthorized access or malware.                |
+
+---
+
+## Threat Events
+Threat events are actual instances where a threat source exploits a vulnerability, causing harm to systems.
+
+### Examples of Threat Events
+| **Event**                                            | **Description**                                                                   |
+|------------------------------------------------------|-----------------------------------------------------------------------------------|
+| Perform reconnaissance                               | Assess vulnerabilities using tools or observations.                              |
+| Obtain sensitive information via exfiltration       | Install malware to locate and extract sensitive data.                            |
+| Alter/Delete critical information                   | Modify or remove data essential to operations.                                   |
+| Craft counterfeit certificates                      | Compromise certificate authorities for illegitimate connections.                 |
+| Conduct Denial of Service (DoS) attacks             | Overwhelm system capabilities with excessive requests.                           |
+| Install persistent network sniffers                 | Capture network traffic to collect sensitive information.                        |
+| Disrupt mission-critical operations                 | Prevent critical business functions through data tampering.                      |
+| Conduct "man-in-the-middle" attacks                 | Intercept and relay communication to compromise system trust.                    |
+
+---
+
+## Likelihood of a Threat Event
+The likelihood of a threat event is assessed based on evidence, prior experience, and expert judgment. This is expressed through a combination of qualitative and quantitative values.
+
+### Likelihood Values
+| **Qualitative** | **Quantitative** | **Description**                                                               |
+|------------------|------------------|-------------------------------------------------------------------------------|
+| High            | 3                | Almost certain to occur; severe impact.                                      |
+| Moderate        | 2                | Somewhat likely; significant functional reduction.                           |
+| Low             | 1                | Highly unlikely; minimal or negligible effects.                              |
+
+---
+
+## Severity of a Threat Event
+Severity measures the potential impact of a threat event on business operations, ranging from minor disruptions to complete operational failures.
+
+### Severity Values
+| **Qualitative** | **Quantitative** | **Description**                                                               |
+|------------------|------------------|-------------------------------------------------------------------------------|
+| High            | 3                | Multiple, severe, or catastrophic effects on operations and assets.          |
+| Moderate        | 2                | Significant reduction in operational functionality.                           |
+| Low             | 1                | Minor or negligible effects.                                                 |
+
+---
+
+## Conclusion
+NIST SP 800-30 Rev. 1 is a comprehensive guide for risk assessment. By understanding threat sources, events, likelihood, and severity, organizations can effectively prioritize and mitigate risks to ensure robust information security.
+
+
+
+
+
+
 
