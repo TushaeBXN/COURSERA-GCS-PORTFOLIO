@@ -1,0 +1,48 @@
+# File Permissions Documentation
+
+## Directory Structure and File Permissions
+
+This document outlines the file structure and permissions within the `/home/researcher2/projects` directory, including files and subdirectories it contains.
+
+---
+
+### Files in `/home/researcher2/projects` Directory
+
+1. **project_k.txt**
+   - **User**: Read, Write
+   - **Group**: Read, Write
+   - **Other**: Read, Write
+
+2. **project_m.txt**
+   - **User**: Read, Write
+   - **Group**: Read
+   - **Other**: None
+
+3. **project_r.txt**
+   - **User**: Read, Write
+   - **Group**: Read, Write
+   - **Other**: Read
+
+4. **project_t.txt**
+   - **User**: Read, Write
+   - **Group**: Read, Write
+   - **Other**: Read
+
+5. **.project_x.txt** *(hidden file)*
+   - **User**: Read, Write
+   - **Group**: Write
+   - **Other**: None
+
+---
+
+### Subdirectory in `/home/researcher2/projects`
+
+#### Subdirectory: `drafts`
+- **User**: Read, Write, Execute
+- **Group**: Execute
+- **Other**: None
+
+---
+
+### Summary
+This documentation provides an overview of the current permissions for all files and subdirectories within the `/home/researcher2/projects` directory. Proper permission management ensures data security and controlled access.
