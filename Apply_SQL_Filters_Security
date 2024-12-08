@@ -1,0 +1,31 @@
+# Apply Filters to SQL Queries
+
+## Project Description
+My organization is working to enhance system security. 
+My role involves ensuring the system is safe, investigating potential security issues, and updating employee computers as needed. 
+This project demonstrates how I used SQL filters to perform security-related tasks.
+
+---
+
+## Retrieve After-Hours Failed Login Attempts
+There was a potential security incident that occurred after business hours (after 18:00). All failed login attempts during these hours needed to be investigated.
+
+### SQL Query
+```sql
+SELECT * 
+FROM log_in_attempts
+WHERE login_time > '18:00' AND success = FALSE;
+
+SQL Example Output
+event_id	username	login_date	login_time	country	ip_address	    success
+2	        patel	    2022-05-10	20:27:27	  CAN	    192.168.205.12	FALSE
+18	      pwashing	2022-05-11	19:28:50	  US	    192.168.66.142	FALSE
+20	      tshah	    2022-05-12	18:56:36	  MEXICO	192.168.109.50	FALSE
+
+SQL Query
+SELECT * 
+FROM log_in_attempts
+WHERE login_date BETWEEN '2022-05-08' AND '2022-05-09';
+
+Explanation
+login_date BETWEEN '2022-05-08' AND '2022-05-09': Filters for login attempts on 2022-05-09 and the preceding day.
