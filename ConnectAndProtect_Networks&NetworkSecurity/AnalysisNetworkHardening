@@ -1,0 +1,38 @@
+# Security Risk Assessment Report
+
+---
+
+## Part 1: Selected Hardening Tools and Methods
+1. **Password Policies**
+2. **Firewall Maintenance**
+3. **Implement Multi-Factor Authentication (MFA)**
+
+---
+
+## Part 2: Recommendations
+
+### 1. Multi-Factor Authentication (MFA)
+- **Why?**  
+  - MFA significantly increases security by requiring multiple forms of verification, making it harder for attackers to breach the network.
+  - It also prevents internal users from sharing passwords, which is especially critical for users with admin access.
+
+---
+
+### 2. Password Policies
+- **Why?**  
+  - Following strong password policies enhances user security and reduces the likelihood of breaches.
+  - Regular enforcement and adherence to password rules are essential to mitigate risks.
+
+---
+
+### 3. Firewall Maintenance
+- **Why?**  
+  - Regular maintenance and updates to firewall rules help protect against suspicious network traffic and various types of attacks.
+  - Firewalls should be updated promptly in response to any identified security issues.
+
+---
+
+## Summary
+Implementing these three methods—**MFA**, **strong password policies**, and **firewall maintenance**—provides a robust defense against unauthorized access, strengthens internal security, and mitigates risks from external threats.
+
+---
