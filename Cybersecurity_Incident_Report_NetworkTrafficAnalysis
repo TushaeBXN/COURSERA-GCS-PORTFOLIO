@@ -1,0 +1,47 @@
+# Cybersecurity Incident Report: Network Traffic Analysis
+
+---
+
+## Part 1: Summary of the Problem in DNS and ICMP Traffic Logs
+
+- **Issue Identified**: The DNS server is unreachable.
+- **Evidence**:
+  - Network analysis results indicate an **ICMP echo reply** with the error message: `"UDP port 53 unreachable"`.
+  - **Port 53** is typically used for DNS protocol traffic.
+- **Likely Cause**: The DNS server is not responding.
+
+---
+
+## Part 2: Data Analysis and Possible Cause of the Incident
+
+### **Timeline and Observations**
+- **Incident Start Time**: November 3rd, 13:24 PM.
+- **How It Was Detected**: Customers reported errors, specifically a `"destination port unreachable"` message when trying to access the website.
+- **Verification**:
+  - The IT team confirmed the issue via browser testing.
+  - **Packet Sniffing**: Conducted using `tcpdump`, which revealed logs indicating that **DNS port 53 was unreachable**.
+
+### **Potential Causes**
+1. **DNS Server Issues**:
+   - The server may be down due to:
+     - A successful **Denial of Service (DoS) attack**.
+     - Misconfigurations leading to unresponsiveness.
+2. **Firewall Interference**:
+   - Traffic to **port 53** might be blocked by firewall rules.
+
+---
+
+## Next Steps
+1. **Verify DNS Server Status**:
+   - Check for signs of DoS attack activity.
+   - Confirm DNS server configurations and restart if necessary.
+2. **Inspect Firewall Rules**:
+   - Review and update firewall policies to ensure traffic to port 53 is not erroneously blocked.
+3. **Mitigate and Monitor**:
+   - Implement additional monitoring tools to detect similar issues in real-time.
+   - Evaluate current defenses against DoS attacks and reinforce where necessary.
+
+---
+
+## Conclusion
+This report highlights a potential DNS server unavailability, identified through ICMP and UDP protocol analysis. Immediate action to diagnose and resolve the server's state or firewall settings will mitigate further disruption.
