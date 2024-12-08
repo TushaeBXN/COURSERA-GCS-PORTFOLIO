@@ -1,0 +1,70 @@
+# Apply OS Hardening Techniques
+
+## Traffic Log Analysis: DNS and HTTP
+
+### Overview
+This log captures DNS resolution and subsequent HTTP communication between the client machine (`your.machine`) and remote servers 
+(`yummyrecipesforme.com` and `greatrecipesforme.com`). The analysis identifies key interactions and provides insights into the network traffic patterns.
+
+---
+
+### Traffic Log Details
+
+#### DNS Traffic
+14:18:32.192571 IP your.machine.52444 > dns.google.domain: 35084+ A? 
+yummyrecipesforme.com. (24) 14:18:32.204388 IP dns.google.domain > your.machine.52444: 
+35084 1/0/0 A 203.0.113.22 (40) 14:20:32.192571 IP your.machine.52444 > 
+dns.google.domain: 21899+ A? greatrecipesforme.com. (24) 14:20:32.204388 IP dns.google.domain > your.machine.52444: 21899 1/0/0 A 192.0.2.17 (40)
+
+
+#### HTTP Traffic
+14:18:36.786501 IP your.machine.36086 > yummyrecipesforme.com.http: Flags [S], seq 2873951608, win 65495, options [mss 65495,sackOK,TS val 3302576859 ecr 0,nop,wscale 7], length 0 14:18:36.786517 IP yummyrecipesforme.com.http > your.machine.36086: Flags [S.], 
+seq 3984334959, ack 2873951609, win 65483, options [mss 65495,sackOK,TS val 3302576859 ecr 3302576859,nop,wscale 7], length 0 14:18:36.786529 IP your.machine.36086 > yummyrecipesforme.com.http: Flags [P.], seq 1:74, ack 1, win 512, 
+options [nop,nop,TS val 3302576859 ecr 3302576859], length 73: HTTP: GET / HTTP/1.1 14:25:29.576493 IP your.machine.56378 > greatrecipesforme.com.http: Flags [S], seq 1020702883, win 65495, options [mss 65495,sackOK,TS val 3302989649 ecr 0,nop,wscale 7], 
+length 0 14:25:29.576510 IP greatrecipesforme.com.http > your.machine.56378: Flags [S.], seq 1993648018, ack 1020702884, win 65483, options [mss 65495,sackOK,TS val 3302989649 ecr 3302989649,nop,wscale 7], length 0 14:25:29.576524 IP your.machine.56378 > 
+greatrecipesforme.com.http: Flags [P.], seq 1:74, ack 1, win 512, options [nop,nop,TS val 3302989649 ecr 3302989649], length 73: HTTP: GET / HTTP/1.1
+
+
+---
+
+### Key Observations
+
+1. **DNS Resolution**:
+   - DNS requests were successfully resolved for `yummyrecipesforme.com` (IP: `203.0.113.22`) and `greatrecipesforme.com` (IP: `192.0.2.17`).
+   - The DNS responses were quick, suggesting no delay in resolution.
+
+2. **HTTP Communication**:
+   - HTTP communication follows a successful TCP handshake, with GET requests sent to both `yummyrecipesforme.com` and `greatrecipesforme.com`.
+   - Extensive HTTP traffic on port 80 indicates potential large-scale data transfer or activity on these websites.
+
+3. **Potential Risks**:
+   - Unencrypted HTTP traffic on port 80 may expose sensitive information.
+   - Excessive traffic patterns could indicate malicious activity or misuse.
+
+---
+
+### Recommendations for OS Hardening
+
+1. **Enforce Encryption**:
+   - Configure web servers to use HTTPS instead of HTTP to secure communication.
+   - Implement SSL/TLS certificates for secure data exchange.
+
+2. **Firewall Rules**:
+   - Restrict incoming/outgoing traffic to trusted DNS and HTTP servers.
+   - Monitor and block excessive traffic patterns to prevent potential Denial-of-Service (DoS) attacks.
+
+3. **Update DNS Settings**:
+   - Use DNSSEC to enhance DNS resolution security.
+   - Regularly update DNS server configurations to mitigate vulnerabilities.
+
+4. **Traffic Monitoring**:
+   - Employ intrusion detection/prevention systems (IDS/IPS) to analyze HTTP and DNS traffic for anomalies.
+   - Use tools like Wireshark or tcpdump for continuous monitoring.
+
+5. **Access Controls**:
+   - Limit access to critical services and ensure strict authentication policies.
+
+---
+
+### Conclusion
+The log reveals successful DNS resolutions and HTTP communications but highlights areas for improvement in securing data exchanges and mitigating risks. Implementing OS hardening techniques will enhance overall network resilience.
