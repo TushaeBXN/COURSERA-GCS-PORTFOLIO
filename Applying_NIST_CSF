@@ -1,0 +1,51 @@
+# Applying the NIST Cybersecurity Framework (CSF)
+
+The **NIST Cybersecurity Framework (CSF)** outlines five core functions: **Identify, Protect, Detect, Respond, and Recover** to manage cybersecurity risks effectively.
+
+## Core Functions
+
+### 1. Identify
+Audit systems, processes, and people to uncover vulnerabilities.
+- **Assets:** Which devices, software, and networks are affected?
+- **Processes:** Which business workflows are impacted?
+- **People:** Who needs access to affected systems?
+
+---
+
+### 2. Protect
+Safeguard critical assets with preventative measures.
+- **Access Control:** Limit access to necessary personnel.
+- **Awareness/Training:** Educate staff on prevention strategies.
+- **Data Security:** Enhance protection for sensitive data.
+- **Technologies:** Update firewalls, IPS, and software as needed.
+
+---
+
+### 3. Detect
+Identify threats with monitoring and detection tools.
+- **Anomalies:** Use tools like SIEM for threat alerts.
+- **Continuous Monitoring:** Implement network monitoring processes.
+- **Processes:** Leverage IDS to detect suspicious activities.
+
+---
+
+### 4. Respond
+Mitigate and manage incidents effectively.
+- **Planning:** Establish action plans for future incidents.
+- **Communication:** Inform stakeholders, staff, and end users.
+- **Mitigation:** Isolate and contain affected resources.
+- **Improvements:** Refine response strategies.
+
+---
+
+### 5. Recover
+Restore systems and processes after incidents.
+- **Planning:** Define recovery processes for resources and data.
+- **Improvements:** Update recovery systems and procedures.
+- **Communication:** Keep stakeholders informed during restoration.
+
+---
+
+## Summary
+The NIST CSF provides a comprehensive framework to identify, mitigate, and recover from cybersecurity threats. 
+These functions help organizations stay resilient, minimize risks, and adapt to evolving threats.
