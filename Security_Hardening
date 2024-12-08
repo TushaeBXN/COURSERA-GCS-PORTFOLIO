@@ -1,0 +1,63 @@
+# Security Hardening Tasks
+
+## Description and Common Uses
+
+### Baseline Configurations
+- **Description:** A documented set of specifications used as a basis for system builds, releases, and updates.
+- **Uses:** Restore systems after network outages or unauthorized changes.
+
+### Configuration Checks
+- **Description:** Update encryption standards for stored data.
+- **Uses:** Detect unauthorized system changes.
+
+### Disabling Unused Ports
+- **Description:** Block unused ports on firewalls, routers, and servers to prevent malicious traffic.
+- **Uses:** Prevent attacks before incidents occur or block future attacks.
+
+### Encryption Using Latest Standards
+- **Description:** Use updated rules for encrypting outgoing and decrypting incoming data.
+- **Uses:** Regularly assess encryption security or update encryption after breaches.
+
+### Firewall Maintenance
+- **Description:** Regularly check and update firewall security configurations.
+- **Uses:** Protect against abnormal traffic and DDoS attacks.
+
+### Hardware & Software Disposal
+- **Description:** Properly wipe and dispose of outdated hardware and software.
+- **Uses:** Prevent threats from unpatched devices.
+
+### Multifactor Authentication (MFA)
+- **Description:** Verify user identity with two or more methods (e.g., password, fingerprint, OTP).
+- **Uses:** Defend against brute force attacks and enhance overall access security.
+
+### Network Access Privileges
+- **Description:** Control access to network assets for roles, groups, IPs, and MAC addresses.
+- **Uses:** Reduce risks of unauthorized access and mitigate social engineering threats.
+
+### Network Log Analysis
+- **Description:** Examine network logs for suspicious activity.
+- **Uses:** Alert security teams to abnormal traffic; track traffic during and after incidents using SIEM tools.
+
+### Password Policies
+- **Description:** Follow NIST guidelines to use salting and hashing instead of frequent password changes.
+- **Uses:** Defend against brute force attacks and prevent password guessing.
+
+### Patch Updates
+- **Description:** Apply software and OS updates to address vulnerabilities.
+- **Uses:** Fix security problems and prevent exploits from known vulnerabilities.
+
+### Penetration Testing (Pen Test)
+- **Description:** Simulated attacks to identify system vulnerabilities.
+- **Uses:** Proactively prevent potential attacks.
+
+### Port Filtering
+- **Description:** Use firewalls to block or allow specific port numbers.
+- **Uses:** Control network traffic and block unauthorized access.
+
+### Removing or Disabling Unused Applications and Services
+- **Description:** Eliminate unused applications and services that may not be updated.
+- **Uses:** Reduce vulnerabilities within the network.
+
+### Server and Data Storage Backups
+- **Description:** Protect data assets with physical or cloud backups.
+- **Uses:** Restore lost data from attacks, errors, or equipment failures.
