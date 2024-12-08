@@ -1,0 +1,52 @@
+# Cybersecurity Incident Report: SYN Flood
+
+---
+
+## Section 1: Identifying the Type of Attack and Explaining the Network Disruption
+
+### **Type of Attack**
+The network interruption was identified as a **Denial of Service (DoS) SYN Flood attack** based on automated alerts and detailed analysis.
+
+### **Network Disruption Details**
+- Initial alert: An automated notification flagged an issue with the web server, leading to connection timeouts for website visitors.
+- Investigation: 
+  - **Tool used**: Wireshark for TCP/HTTP log analysis.
+  - **Findings**: A surge in TCP SYN requests from an unfamiliar IP address was detected, confirming a potential SYN Flood attack.
+
+---
+
+## Section 2: How the Attack Causes Website Malfunction
+
+### **Attack Mechanism: Exploiting the TCP Handshake**
+In a SYN flood attack, the malicious actor manipulates the TCP handshake process by overwhelming the server with excessive connection requests. Here's how the handshake normally works:
+1. **SYN (Synchronize)**: The initiating device sends a SYN packet to the destination device, signaling a connection request.
+2. **SYN-ACK (Synchronize-Acknowledge)**: The destination device responds with a SYN-ACK packet, acknowledging the request and indicating readiness to connect.
+3. **ACK (Acknowledge)**: The initiating device sends an ACK packet, completing the connection setup, after which data exchange begins.
+
+### **Impact of the SYN Flood**
+- The server's limited port availability becomes overwhelmed, preventing legitimate connections.
+- Results include:
+  - Website slowdown or total inaccessibility.
+  - Revenue loss and diminished customer trust.
+  - Potential damage to server infrastructure and stored data.
+
+---
+
+## Recommendations for Mitigation
+
+To prevent future SYN Flood attacks, implement the following proactive measures:
+
+1. **Next Generation Firewall (NGFW)**:
+   - Monitor and analyze traffic patterns for signs of suspicious activity.
+   - Block malicious SYN requests in real-time.
+
+2. **VPNs and Encryption**:
+   - Conceal the web server's IP address, making it harder for attackers to target.
+
+3. **Network Subnetting**:
+   - Isolate critical resources within subnets to contain the impact of attacks and prevent widespread disruptions.
+
+---
+
+## Conclusion
+This report underscores the importance of robust cybersecurity measures to mitigate the risks associated with SYN Flood attacks. By adopting the recommended strategies, the organization can strengthen its defense and ensure operational resilience.
